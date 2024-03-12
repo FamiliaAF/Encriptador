@@ -3,24 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🎮Encriptrador</title>
   <link rel="stylesheet" href="./main.css">
+  <title>Encriptador</title>
 </head>
 <body>
   <div class="container">
-    <input id="input-encriptar" class="input-encriptar" type="text" placeholder="Ingresa un texto:">
-    <div class="buttons">
-      <button id="btn-encriptar" class="btn-encriptar">Encriptar</button>
-      <button id="btn-desencriptar" class="btn-desencriptar">Desencriptar</button>
-    </div>
+    <section class="left">
+      <header>
+        <img src="./images/logo.svg" alt="">
+      </header>
+      <textarea id="input-text" rows="10" placeholder="Ingrese el texto..."></textarea>
 
-    <button id="btn-copiar" class="btn-copiar">Copiar</button>
+      <p class="legend">
+        <img src="./images/icon-excl.svg" alt="">
+      </p>
+
+      <div class="buttons">
+        <button class="btn btn-primary" id="btn-encriptar">Encriptar</button>
+        <button class="btn" id="btn-desencriptar">Desencriptar</button>
+      </div>
+  
+    </section>
+    <section class="right">
+      <div class="display" id="display">
+        <h3>Ningún texto fue encontrado</h3>
+        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+      </div>
+      <button class="btn btn-copiar" id="btn-copiar">Copiar</button>
+    </section>
   </div>
-
-  <div class="result">
-    <h1 id="display" class="display"></h1>
-  </div>
-
-  <script src="app.js"></script>
+  
+  <script src="./app.js"></script>
 </body>
 </html>
