@@ -25,21 +25,21 @@ function desencriptador(texto) {
   return texto;
 }
 
-const inputEncriptar = document.getElementById("input-encriptar");
+const inputText = document.getElementById('input-text')
 const btnEncriptar = document.getElementById("btn-encriptar");
 const btnDesencriptar = document.getElementById("btn-desencriptar");
 const btnCopiar = document.getElementById("btn-copiar");
 const display = document.getElementById("display");
 
 btnEncriptar.addEventListener('click', () => {
-  const texto = inputEncriptar.value;
+  const texto = inputText.value;
   const textoEncriptado = encriptador(texto);
-  display.innerText = textoEncriptado
   btnCopiar.style.display = 'block';
+  display.innerText = textoEncriptado
 });
 
 btnDesencriptar.addEventListener('click', () => {
-  const texto = inputEncriptar.value;
+  const texto = inputText.value;
   const textoDesencriptado = desencriptador(texto);
   display.innerText = textoDesencriptado
 });
